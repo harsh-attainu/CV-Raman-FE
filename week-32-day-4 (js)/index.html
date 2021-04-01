@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>MY Books</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div id="page-banner">
+          <h1 class="title">Bookipedia</h1>
+          <p>Books for everyone</p>
+          <form id="search-books">
+            <input type="text" placeholder="Search books..." />
+          </form>
+        </div>
+      </header>
+      <div id="book-list">
+        <h2 class="title">Books to Read</h2>
+        <ul>
+          <li>
+            <span id="sp1" class="name">Dune</span>
+            <span class="delete">delete</span>
+          </li>
+          <li>
+            <span class="name">1984</span>
+            <span class="delete">delete</span>
+          </li>
+          <li>
+            <span class="name">Art of War</span>
+            <span class="delete">delete</span>
+          </li>
+          <li>
+            <span class="name">Lodrs of the Rings</span>
+            <span class="delete">delete</span>
+          </li>
+        </ul>
+      </div>
+      <form id="add-book">
+        <input type="text" id="new-book-name" required placeholder="Add a book..." />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
