@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  </body>
+</html>
+
+<script>
+  console.log('Started');
+
+  postreq();
+  getreq();
+
+  //1. By default fetch sends GET request
+  //2. To get the response body, you need to call .json();
+  //3. Fetch always succeeds, no matter what the server response is.
+  //4. Fetch fails when there's a problem with the internet connection in the browser.
+  //5. If sending post request, set method to post, use proper header, and convert body to json string
+
+
+  async function postreq() {
+    try {
+      let options = {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: 'abc',
+          job: 'worker'
+        })
+      }
+      let response = await fetch('https://reqres.in/api/users', options);
+      if(response.ok) {
+        console.log("Post Request successfull")
+        console.log(await response.json())
+      } else {
+        console.log("Post Request failed")
+      }
+    } catch(e) {
+      console.log("error in post request", e);
+    }
+  }
+
+  async function getreq() {
+    try {
+      let response = await fetch('https://reqres.in/api/users');
+      if(response.ok) {
+        console.log("Get Request successfull")
+        console.log(await response.json())
+      } else {
+        console.log("Get Request failed")
+      }
+    } catch(e) {
+      console.log("error in get request", e);
+    }
+  }
+</script>

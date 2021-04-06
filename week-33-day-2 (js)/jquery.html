@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="title">Login Page</h1>
+      <p id="para" style="color:red">Some unknown error occured, please try again</p>
+      <img id="image" style="display:none;" src="https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270">
+      <button onclick="vanilla()">Click me to toggle the error</button>
+      <button onclick="jq()">Click me to toggle the image via JQuery</button>
+    </div>
+  </body>
+  
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  console.log("Jquery page");
+  console.log(document.querySelectorAll('#title'));
+  console.log($("#title"));
+
+  function vanilla() {
+    let p = document.querySelector('#para');
+    if(p.style.display=="block") {
+      p.style.display="none"
+    } else p.style.display="block";
+    p.innerHTML = 'this is new html'
+  }
+
+  function jq() {
+    console.log($("#para").html())
+    $("#para").html("this is a new error");
+  }
+
+
+</script>

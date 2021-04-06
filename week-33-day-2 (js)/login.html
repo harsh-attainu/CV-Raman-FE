@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <h1>Login Page</h1>
+    </div>
+  </body>
+  
+</html>
+
+<script>
+  console.log('We are on login page now');
+
+  function navigateToHome() {
+    console.log("Navigating to Home");
+    // window.location.href = 'home.html';
+    // window.location.assign('home.html'); //equals to href
+    window.location.replace('home.html'); //replaces the current url
+  }
+  
+  setTimeout(function() {navigateToHome()}, 3000);
+</script>
