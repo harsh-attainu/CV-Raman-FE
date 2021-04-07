@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Currency Exchange</title>
+  </head>
+  <body>
+    <!-- <div id="square" style="position:absolute; background-color: red; width:100px; height:100px"></div> -->
+    <div id="wrapper">
+      <header>
+        <div id="page-banner">
+          <h1 class="title">Currency Converter</h1>
+          <p>Simple app to convert currencies</p>
+         
+        </div>
+      </header>
+     
+      <form id="main-form">
+        <div>
+          <label>Select the base currency</label>
+          <select id="from-currency">
+
+          </select>
+        </div>
+        <div>
+          <label>Enter the base currency amount</label>
+          <input type="number" id="from-amount" required placeholder="Enter amount" />
+        </div>
+        <div>
+          <label>Select the currency you want to convert to</label>
+        <select id="to-currency">
+         
+        </select>
+        </div>
+        <div id="output">
+          Select a currency to convert
+        </div>
+        <br>
+        <button type="submit">Convert</button>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="api.js"></script>
+  </body>
+</html>
