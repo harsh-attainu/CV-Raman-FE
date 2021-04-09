@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic Quiz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+    <div id="welcome-card" class="card text-center">
+      <div class="card-header">
+        Dynamic Test
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Take an awesome test</h5>
+        <p class="card-text">High score till now: <u id="high-score">No high score yet</u></p>
+        <a href="#" id="start-quiz" class="btn btn-primary">Start the test</a>
+      </div>
+      <div class="card-footer text-muted">
+        Made with ❤
+      </div>
+    </div>
+
+    <div id="quiz-card"  style="display:none;" class="card text-center">
+      <div id="question-number" class="card-header">
+        Question 1 out of 10
+      </div>
+      <div class="card-body">
+        <p id="category" class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 id="question" class="card-title">Question goes here</h5>
+        <div class="row">
+       
+          <div class="mx-auto mt-3 btn-group-vertical col-sm-12 col-md-8 col-lg-6" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="choices" id="choice1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="choice1" id="choice1-text">Radio 1</label>
+          
+            <input type="radio" class="btn-check" name="choices" id="choice2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="choice2" id="choice2-text">Radio 2</label>
+          
+            <input type="radio" class="btn-check" name="choices" id="choice3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="choice3" id="choice3-text">Radio 3</label>
+
+            <input type="radio" class="btn-check" name="choices" id="choice4" autocomplete="off">
+            <label class="btn btn-outline-primary" for="choice4" id="choice4-text">Radio 4</label>
+          </div>
+       
+        </div>
+        <p id="question-err" style="display:none; color:red">Select an answer</p>
+        <p id="question-status" style="display:none;"></p>
+      </div>
+      <div class="card-footer text-muted">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          
+          <button id="next_btn" class="btn btn-primary" type="button">Next</button>
+          <button id="submit_btn" type="button" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-card" style="display: none;" class="card text-center">
+      <div class="card-header">
+        Result
+      </div>
+      <div class="card-body">
+        <h5 id="result-title" class="card-title">Great!</h5>
+        <p id="result-score" class="card-text">You scored 1/10</p>
+        <a id="play-again-btn" href="#" class="btn btn-primary">Play again</a>
+      </div>
+      
+    </div>
+  </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="test.js"></script>
+</html>
